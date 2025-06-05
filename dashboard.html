@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard Form</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+<form id="userForm" novalidate>
+  <h2>User Details</h2>
+
+  <label for="fullName">Full Name</label>
+  <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" />
+  <span class="error" id="fullNameError"></span>
+
+  <label for="dob">Date of Birth</label>
+  <input type="date" id="dob" name="dob" max="" />
+  <span class="error" id="dobError"></span>
+
+  <label for="qualification">Qualification</label>
+  <select id="qualification" name="qualification">
+    <option value="" disabled selected>Select Qualification</option>
+    <option value="MCA">MCA</option>
+    <option value="BCA">BCA</option>
+    <option value="Others">Others</option>
+  </select>
+  <span class="error" id="qualificationError"></span>
+
+  <label for="othersText" id="othersLabel" style="display:none;">Please specify</label>
+  <input type="text" id="othersText" name="othersText" placeholder="Please specify" style="display:none;" />
+  <span class="error" id="othersError"></span>
+
+  <label for="message">Message / Comments</label>
+  <textarea id="message" name="message" placeholder="Enter your message or comments"></textarea>
+  <span class="error" id="messageError"></span>
+
+  <button type="submit">Submit</button>
+  <p id="formMessage"></p>
+</form>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
